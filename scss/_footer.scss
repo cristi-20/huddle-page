@@ -1,0 +1,125 @@
+// Footer
+.footer {
+    position: relative;
+    background:$veryDarkCyan;
+    width: 100vw;
+    justify-content: center;
+    padding-top:8rem;
+    
+    p,h2{
+      color:$white;
+    }
+  
+    .footer_container {
+      flex-direction: column;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 8rem;
+      padding-inline:2rem;
+      padding-block:8rem;
+      max-width: 1440px;
+      
+  
+      @include lg {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+  
+    .col_2,.col_1 {
+        width: 100%;
+        max-width: 400px;
+
+        @include xl {
+          max-width: 500px;
+        }
+      
+    }
+
+    
+    // First footer Column
+   .col_1 {
+    flex-direction: column;
+    gap:3rem;
+
+  .info_wrapper {
+    gap:1rem;
+    flex-direction: column;
+
+    .flex {
+     align-items: center;
+     gap: 1rem;
+
+      p {
+        margin:0;
+      }
+    }
+  }
+
+  .social_icons {
+     gap:1.5rem;
+  
+     .icons {
+       width: 30px;
+     }
+   }
+}
+  
+   .footer_title {
+     text-transform: uppercase;
+   }
+  
+   .footer_text {
+     text-align: left;
+   }
+
+//    Second footer column
+
+.col_2 {
+    align-self: flex-start;
+    flex-direction: column;
+    gap:3rem;
+
+    .flex_wrapper {
+        flex-direction: column;
+    
+        input {
+          width: 100%;
+          padding:.7rem;
+          margin:1.5rem 0 1rem 0;
+          border-radius:5px;
+          font-size: 1rem;   
+        }
+     
+        .subscribe_btn {
+         align-self:end;
+         width: 50%;
+         padding-block:.8rem;
+          background:$pink;
+          font-size: 1rem;
+          font-weight: 700;
+          border-radius:5px;
+          color:$white;
+        }
+      }
+
+
+      @include lg {
+        .flex_wrapper {
+            flex-direction: row;
+            align-items: center;
+            gap:2rem;
+            width:100%;
+
+            input {
+                margin:0;
+                width: 250px;
+            }
+
+            .subscribe_btn {
+                width: 150px;
+            }
+        }
+      }  
+}
+  }

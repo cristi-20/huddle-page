@@ -1,0 +1,79 @@
+// Grow together section wave shapes Start
+// Top Wave shape
+.shape-fill {
+    fill: #FFFFFF;
+}
+
+.top-wave-shape,.bottom-wave-shape {
+    svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 73px;
+        transform: rotateY(180deg);
+    } 
+}
+
+.top-wave-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.bottom-wave-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    
+}
+
+// Grow together section wave shapes End
+// Your users section wave shapes Start
+.your_users_top_wave_shape {
+    @extend .top-wave-shape;
+    
+    svg {
+        position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 110px;
+    }
+}
+
+.your_users_bottom_wave_shape {
+    @extend .bottom-wave-shape;
+    transform: rotate(180deg);
+    svg {
+        position: relative;
+        display: block;
+        width: calc(126% + 1.3px);
+        height: 96px;
+    }
+}
+// Footer Wave
+.footer_wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+
+    svg {
+        position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 70px;
+    @include md {
+height:130px;
+    }
+    transform: rotateY(180deg);
+    }
+}
